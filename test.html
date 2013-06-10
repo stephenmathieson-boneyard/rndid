@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>rndid()</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/components/visionmedia-mocha/mocha.css">
+    <script src="/components/visionmedia-mocha/mocha.js"></script>
+    <script src="/components/rowanmanning-proclaim/lib/proclaim.js"></script>
+    <script>
+      mocha.setup('bdd')
+      assert = proclaim
+    </script>
+    <script src="/build/build.js"></script>
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <div id="fixture"></div>
+    <script>
+      var rndid = require('rndid')
+
+      describe('rndid', function () {
+
+        it('should be a function', function () {
+          assert.isFunction(rndid)
+        })
+
+        it('should return a string', function () {
+          assert.isString(rndid())
+        })
+
+        it('should generate unique ids', function () {
+          for (var i = 0; i < 5000; i++)
+            assert.isNull(document.getElementById(rndid()))
+        })
+
+        it('should take a length param', function () {
+          for (var i = 1; i < 100; i++) {
+            var id = rndid(i)
+            assert.length(id, i)
+          }
+        })
+
+      })
+
+      mocha.run()
+    </script>
+  </body>
+</html>
