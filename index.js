@@ -1,7 +1,3 @@
-// jshint asi:true
-
-var seed = 0x0deadbeef
-
 function c() {
   return String.fromCharCode(Math.floor(Math.random() * (122-97)) + 97)
 }
