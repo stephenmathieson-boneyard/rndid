@@ -8,4 +8,8 @@ components: component.json
 clean:
 	rm -fr build components template.js
 
-.PHONY: clean
+lint:
+	@jshint --verbose index.js
+	@echo 'Lint free :)'
+
+.PHONY: clean lint

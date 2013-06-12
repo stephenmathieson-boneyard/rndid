@@ -1,0 +1,15 @@
+{
+  "browser": true,
+  "globals": {
+    "require": false,
+    "exports": true,
+    "module": false
+  },
+  "indent": 2,
+  "laxbreak": true,
+  "maxstatements": 3,
+  "maxcomplexity": 3,
+  "maxdepth": 3,
+  "maxlen": 70,
+  "globalstrict": true
+}
