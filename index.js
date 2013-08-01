@@ -40,7 +40,7 @@ var rndid = module.exports = function (len) {
   // lookup to guarantee unique
   if (document.getElementById(id))
     // try again
-    return rndid();
+    return rndid(len);
 
   return id;
 };
