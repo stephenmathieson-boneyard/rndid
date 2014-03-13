@@ -2,14 +2,12 @@
   "name": "rndid",
   "repo": "stephenmathieson/rndid",
   "description": "generate a guaranteed unique id",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "keywords": [ "dom", "id", "random" ],
   "dependencies": {},
   "development": {
     "component/assert": "*"
   },
   "license": "MIT",
-  "scripts": [
-    "index.js"
-  ]
+  "scripts": [ "index.js" ]
 }
