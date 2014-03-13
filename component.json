@@ -3,13 +3,10 @@
   "repo": "stephenmathieson/rndid",
   "description": "generate a guaranteed unique id",
   "version": "0.0.3",
-  "keywords": [
-    "dom", "id", "random"
-  ],
+  "keywords": [ "dom", "id", "random" ],
   "dependencies": {},
   "development": {
-    "visionmedia/mocha": "*",
-    "rowanmanning/proclaim": "*"
+    "component/assert": "*"
   },
   "license": "MIT",
   "scripts": [

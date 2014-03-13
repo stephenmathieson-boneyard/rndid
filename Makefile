@@ -1,15 +1,25 @@
 
-build: components index.js
-	@component build --dev
+BINS = node_modules/.bin
+BUILD_FLAGS ?= --dev
+INSTALL_FLAGS ?= --dev
+DEPS = node_modules components
+SRC = index.js
+TEST_RUNNER ?= browser
+TEST_PORT ?= 8888
+
+build: $(DEPS) $(SRC)
+	$(BINS)/component-build $(BUILD_FLAGS)
 
 components: component.json
-	@component install --dev
+	$(BINS)/component-install $(INSTALL_FLAGS)
+
+node_modules: package.json
+	npm install
+
+test: build
+	$(BINS)/component-test $(TEST_RUNNER)
 
 clean:
-	rm -fr build components template.js
+	rm -rf build components
 
-lint:
-	@jshint --verbose index.js
-	@echo 'Lint free :)'
-
-.PHONY: clean lint
+.PHONY: clean test kill-server

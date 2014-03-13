@@ -11,7 +11,7 @@
 
 `rndid([length])`
 
-Return a guaranteed unique id of the provided `length` or 7.
+  Return a guaranteed unique id of the provided `length` or 7.
 
 ## License
 
