@@ -21,4 +21,24 @@ describe('rndid', function () {
       assert(i == rndid(i).length);
     }
   });
+
+  it('should take a prefix', function () {
+    var prefix = 'my-prefix';
+    for (var i = 0; i < 5000; i++) {
+      var id = rndid(prefix);
+      assert(!document.getElementById(id));
+      assert(prefix == id.substr(0, prefix.length));
+    }
+  });
+
+  it('should take a prefix and a length', function () {
+    var prefix = 'my-prefix';
+    var len = 13;
+    for (var i = 0; i < 5000; i++) {
+      var id = rndid(prefix, 13);
+      assert(!document.getElementById(id));
+      assert(prefix == id.substr(0, prefix.length));
+      assert(len + prefix.length == id.length);
+    }
+  });
 });

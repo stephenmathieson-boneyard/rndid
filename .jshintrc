@@ -7,9 +7,7 @@
   },
   "indent": 2,
   "laxbreak": true,
-  "maxstatements": 3,
-  "maxcomplexity": 3,
+  "expr": true,
   "maxdepth": 3,
-  "maxlen": 70,
-  "globalstrict": true
+  "maxlen": 70
 }
