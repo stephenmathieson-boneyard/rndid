@@ -5,5 +5,8 @@
   "devDependencies": {
     "component-test2": "~0.1.2",
     "component": "~0.19.7"
+  },
+  "scripts": {
+    "test": "TEST_RUNNER=phantom make test"
   }
 }
