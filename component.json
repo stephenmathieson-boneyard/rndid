@@ -2,7 +2,7 @@
   "name": "rndid",
   "repo": "stephenmathieson/rndid",
   "description": "generate a guaranteed unique id",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "keywords": [ "dom", "id", "random" ],
   "dependencies": {},
   "development": {
