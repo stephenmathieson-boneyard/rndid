@@ -9,6 +9,7 @@ describe('rndid', function () {
 
   it('should return a string', function () {
     assert('string' == typeof rndid());
+    assert('undefined' != rndid().substr(0, 9));
   });
 
   it('should generate unique ids', function () {

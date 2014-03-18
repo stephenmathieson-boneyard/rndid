@@ -28,8 +28,7 @@ function rndid(prefix, length) {
   if ('number' == typeof prefix)
     length = prefix, prefix = '';
   length = length || exports.defaultLength;
-
-  var id = prefix + str(length);
+  var id = (prefix || '') + str(length);
   if (document.getElementById(id)) return rndid(prefix, length);
   return id;
 }
